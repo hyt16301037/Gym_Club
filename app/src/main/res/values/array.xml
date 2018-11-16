@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="trainee">
+        <item>Han yutong</item>
+        <item>zzHyt</item>
+        <item>toto</item>
+        <item>Yoann</item>
+        <item>Lu V</item>
+    </string-array>
+
+    <string-array name="sex">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+</resources>

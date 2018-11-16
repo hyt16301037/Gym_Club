@@ -77,7 +77,7 @@ public class ManageFragment extends Fragment {
             public void onClick(View v) {
                 String tem="教练您好，您可在此进行添加操作。";
                 Toast.makeText(getActivity(), tem, Toast.LENGTH_LONG).show();
-
+                getActivity().getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.content_frame, new AddFragment()).commit();
             }
         });
 
@@ -87,7 +87,7 @@ public class ManageFragment extends Fragment {
             public void onClick(View v) {
                 String tem="教练您好，您可在此发布消息。";
                 Toast.makeText(getActivity(), tem, Toast.LENGTH_LONG).show();
-
+                getActivity().getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.content_frame, new PublishFragment()).commit();
             }
         });
     }

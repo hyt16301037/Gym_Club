@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/homepage2"
     tools:context=".HomepageFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -14,41 +15,58 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/NewsView"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/colorPinkRose"
+                    android:fontFamily="@font/carter_one"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Club News"
+                    android:textSize="18sp" />
 
-                    <TextView
-                        android:id="@+id/NewsView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="● Club News"
-                        android:textSize="18sp" />
+                <android.support.v7.widget.CardView
+                    android:layout_width="320dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:elevation="10dp"
+                    android:orientation="vertical"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardCornerRadius="5dp"
+                    app:cardPreventCornerOverlap="true">
 
                     <ImageView
                         android:id="@+id/imageView2"
-                        android:layout_width="350dp"
-                        android:layout_height="250dp"
+                        android:layout_width="300dp"
+                        android:layout_height="160dp"
                         android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
                         android:layout_weight="0"
+                        android:scaleType="fitXY"
                         android:src="@drawable/club_news" />
 
                     <TextView
                         android:id="@+id/News_text"
                         android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center_horizontal"
-                        android:text="健身俱乐部的新宠--智能单车房" />
-
-                </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:text="健身俱乐部的新宠--智能单车房"
+                        android:textSize="18dp" />
+                </android.support.v7.widget.CardView>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -57,9 +75,15 @@
 
                     <TextView
                         android:id="@+id/newsView"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="● Recent Activities"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginBottom="30dp"
+                        android:background="@color/colorPinkRose"
+                        android:fontFamily="@font/carter_one"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Recent Activities"
                         android:textSize="18sp" />
 
                     <LinearLayout
@@ -85,6 +109,10 @@
                                 android:id="@+id/ActivityView1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="10dp"
                                 android:text="  会员滑雪限时免费啦！滑雪爱好者不容错过的福利~"
                                 android:visibility="visible" />
                         </LinearLayout>
@@ -107,22 +135,70 @@
                                 android:id="@+id/ActivityView2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="最美不是下雨天，是曾与你打过太极的公园。大型太极交流会，还不快来切磋！" />
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="最美不是下雨天，是曾与你打过太极的公园。大型太极交流会" />
                         </LinearLayout>
                     </LinearLayout>
 
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <Button
-                        android:id="@+id/button3"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Button" />
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/button3"
+                                android:layout_width="150dp"
+                                android:layout_height="200dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:background="@drawable/news1" />
+
+                            <TextView
+                                android:id="@+id/ActivityView3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingRight="10dp"
+                                android:text="一天之计在于晨，海边晨练21天挑战，快来打卡！"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/button4"
+                                android:layout_width="150dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:background="@drawable/news2" />
+
+                            <TextView
+                                android:id="@+id/ActivityView4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="Li Jian老师塑形课程限时免费中！" />
+                        </LinearLayout>
+                    </LinearLayout>
+
                 </LinearLayout>
 
             </LinearLayout>

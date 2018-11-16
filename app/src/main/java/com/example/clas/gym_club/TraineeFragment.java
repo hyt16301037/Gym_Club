@@ -6,9 +6,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+
+import java.util.Arrays;
 
 
 /**
@@ -26,7 +31,9 @@ public class TraineeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.trainee_layout, container, false);
+
     }
 
     public void onStart(){
@@ -34,6 +41,12 @@ public class TraineeFragment extends Fragment {
 
         ImageView button = (ImageView) getActivity().findViewById(R.id.search_trainee);
         final TextView textView=(TextView)getActivity().findViewById(R.id.search_trainee_text);
+
+        String[] trainee = getResources().getStringArray(R.array.trainee);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_dropdown_item_1line, trainee);
+        AutoCompleteTextView trainee_name_text = getActivity().findViewById(R.id.search_trainee_text);
+        trainee_name_text.setAdapter(adapter);
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
