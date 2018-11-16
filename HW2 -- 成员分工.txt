@@ -1,0 +1,7 @@
+HW2
+韩雨彤：负责注册界面的编写；教练、学员列表的RecyclerView和CardView的添加。
+
+贺金伟：负责登录注册的验证，后端服务器的编写。
+
+（包含全部功能的项目在贺金伟同学的GIT里https://github.com/alexHeForever/GymClub.git
+录屏仅为韩雨彤部分，完整版本在贺金伟的GIT里）
