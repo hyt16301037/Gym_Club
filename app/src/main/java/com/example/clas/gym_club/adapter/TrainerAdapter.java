@@ -16,6 +16,7 @@ public class TrainerAdapter extends RecyclerView.Adapter<TrainerAdapter.ViewHold
         TextView nameTxt;
         TextView learnerTxt;
         TextView infoTxt;
+
         public ViewHolder(View view){
             super(view);
             imageView1 = (ImageView)view.findViewById(R.id.imageView1);

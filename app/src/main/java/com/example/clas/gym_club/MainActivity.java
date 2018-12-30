@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_community:
                 getSupportFragmentManager().beginTransaction().replace(R.id.content_frame,
-                        new CommunityFragment()).commit();
+                        new CommunityFragment()).commit(); // 音乐播放
                 break;
 
             case R.id.nav_log_out:
